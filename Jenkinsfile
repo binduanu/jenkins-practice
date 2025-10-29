@@ -7,7 +7,7 @@ pipeline {
     //     cron('* * * * *')
     // }
     environment { 
-        USER = 'sivakumar'
+        USER = 'vijay'
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -76,7 +76,7 @@ pipeline {
         }
         stage('PROD Deploy'){
             when {
-                environment name: 'USER', value: 'sivakumar'
+                environment name: 'USER', value: 'vijay'
             }
             steps{
                 echo "deploying to PROD"
